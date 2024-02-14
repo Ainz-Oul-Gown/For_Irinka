@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="container">
-            <div>
+            <div class="txt">
                 <h1 class="header_text">Ты меня любишь?</h1>
             </div>
             <div class="gif_container">
@@ -17,21 +17,21 @@
             <div class="buttons">
                 <button class="btn" id="yesButton" onclick="nextPage()">Да</button>
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Нет</button>
-                <script>
-                    function nextPage() {
-                        window.location.href = "stage-2.html";
-                    }
-
-                    function moveButton() {
-                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
-                    }
-                </script>
             </div>
         </div>
     </body>
+    <script>
+        function nextPage() {
+            window.location.href = "stage-2.html";
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script>
 </html>
 
 
